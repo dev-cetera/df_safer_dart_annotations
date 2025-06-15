@@ -1,0 +1,1 @@
+Annotations for the the [df_safer_dart_lints](https://pub.dev/packages/df_safer_dart_lints) package.
