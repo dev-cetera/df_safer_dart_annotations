@@ -3,4 +3,4 @@
 ## [0.1.0]
 
 - Released @ 6/2025 (UTC)
-- Inital commit
+- Inital release
