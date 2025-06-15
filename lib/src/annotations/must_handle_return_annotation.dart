@@ -41,9 +41,11 @@
 ///   safeDivide(10, 0);
 /// }
 /// ```
+@Deprecated('Use @useResult instead.')
 const mustHandleReturn = MustHandleReturnAnnotation();
 
 /// The class that enables the `@mustHandleReturn` annotation.
+@Deprecated('Use @useResult instead.')
 final class MustHandleReturnAnnotation {
   const MustHandleReturnAnnotation();
 }
