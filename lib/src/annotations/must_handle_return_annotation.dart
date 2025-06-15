@@ -45,6 +45,5 @@ const mustHandleReturn = MustHandleReturnAnnotation();
 
 /// The class that enables the `@mustHandleReturn` annotation.
 final class MustHandleReturnAnnotation {
-  /// Creates a new `MustHandleReturn` instance.
   const MustHandleReturnAnnotation();
 }
