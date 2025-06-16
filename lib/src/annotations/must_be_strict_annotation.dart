@@ -1,15 +1,18 @@
 //.title
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //
-// GENERATED - DO NOT MODIFY BY HAND
-// See: https://github.com/dev-cetera/df_generate_dart_indexes
+// Dart/Flutter (DF) Packages by dev-cetera.com & contributors. The use of this
+// source code is governed by an MIT-style license described in the LICENSE
+// file located in this project's root directory.
+//
+// See: https://opensource.org/license/mit
 //
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
-export './annotations/must_be_strict_annotation.dart';
-export './annotations/must_be_anonymous_annotation.dart';
-export './annotations/no_futures_allowed_annotation.dart';
-export './annotations/experimental_annotations.dart';
-export './annotations/must_await_all_futures_annotation.dart';
-export './annotations/must_handle_return_annotation.dart';
+const mustBeStrictAnnotation = MustBeStrictAnnotation();
+
+/// The class that enables the `@mustBeStrictAnnotation` annotation.
+final class MustBeStrictAnnotation {
+  const MustBeStrictAnnotation();
+}

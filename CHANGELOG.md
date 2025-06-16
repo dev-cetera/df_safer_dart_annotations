@@ -9,4 +9,3 @@
 
 - Released @ 6/2025 (UTC)
 - Inital release
-- feat: Add more annotations
