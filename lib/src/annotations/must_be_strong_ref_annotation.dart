@@ -10,16 +10,16 @@
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
-const mustBeStrictOrError = MustBeStrictOrErrorAnnotation();
+const mustBeStrongRefOrError = MustBeStrongRefOrErrorAnnotation();
 
-/// The class that enables the `@mustBeStrictOrError` annotation.
-final class MustBeStrictOrErrorAnnotation {
-  const MustBeStrictOrErrorAnnotation();
+/// The class that enables the `@MustBeStrongRefOrError` annotation.
+final class MustBeStrongRefOrErrorAnnotation {
+  const MustBeStrongRefOrErrorAnnotation();
 }
 
-const mustBeStrict = MustBeStrictAnnotation();
+const mustBeStrongRef = MustBeStrongRefAnnotation();
 
-/// The class that enables the `@mustBeStrict` annotation.
-final class MustBeStrictAnnotation {
-  const MustBeStrictAnnotation();
+/// The class that enables the `@MustBeStrongRef` annotation.
+final class MustBeStrongRefAnnotation {
+  const MustBeStrongRefAnnotation();
 }
