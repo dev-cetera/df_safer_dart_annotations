@@ -10,6 +10,13 @@
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
+const noFuturesAllowedOrError = NoFuturesAllowedOrErrorAnnotation();
+
+/// The class that enables the `@noFuturesAllowedOrError` annotation.
+final class NoFuturesAllowedOrErrorAnnotation {
+  const NoFuturesAllowedOrErrorAnnotation();
+}
+
 const noFuturesAllowed = NoFuturesAllowedAnnotation();
 
 /// The class that enables the `@noFuturesAllowed` annotation.

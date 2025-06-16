@@ -10,42 +10,16 @@
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
-/// An annotation used to mark a function whose return value must be handled.
-///
-/// When a function is annotated with `@mustHandleReturn`, the Dart static
-/// analyzer will issue a warning if the function is called and its return value
-/// is not used (i.e., not assigned to a variable, passed to another function,
-/// or used in an expression).
-///
-/// This is particularly useful for functions that return a `Result`, `Option`,
-/// or `Resolvable` where ignoring the result can lead to unhandled errors or
-/// unexpected behavior.
-///
-/// ### Example
-///
-/// ```dart
-/// @mustHandleReturn
-/// Result<int> safeDivide(int a, int b) {
-///   if (b == 0) {
-///     return Err('Cannot divide by zero');
-///   }
-///   return Ok(a ~/ b);
-/// }
-///
-/// void main() {
-///   // GOOD: The result is handled.
-///   final result = safeDivide(10, 2);
-///   result.ifOk((ok) => print('Result: ${ok.value}'));
-///
-///   // BAD: This will trigger a lint warning because the Result is discarded.
-///   safeDivide(10, 0);
-/// }
-/// ```
-@Deprecated('Use @useResult instead.')
+const mustHandleReturnOrError = MustHandleReturnAnnotation();
+
+/// The class that enables the `@mustHandleReturnOrError` annotation.
+final class MustHandleReturnOrErrorAnnotation {
+  const MustHandleReturnOrErrorAnnotation();
+}
+
 const mustHandleReturn = MustHandleReturnAnnotation();
 
 /// The class that enables the `@mustHandleReturn` annotation.
-@Deprecated('Use @useResult instead.')
 final class MustHandleReturnAnnotation {
   const MustHandleReturnAnnotation();
 }

@@ -10,9 +10,16 @@
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
-const mustBeStrictAnnotation = MustBeStrictAnnotation();
+const mustBeStrictOrError = MustBeStrictOrErrorAnnotation();
 
-/// The class that enables the `@mustBeStrictAnnotation` annotation.
+/// The class that enables the `@mustBeStrictOrError` annotation.
+final class MustBeStrictOrErrorAnnotation {
+  const MustBeStrictOrErrorAnnotation();
+}
+
+const mustBeStrict = MustBeStrictAnnotation();
+
+/// The class that enables the `@mustBeStrict` annotation.
 final class MustBeStrictAnnotation {
   const MustBeStrictAnnotation();
 }

@@ -10,6 +10,13 @@
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
+const mustAwaitAllFuturesOrError = MustAwaitAllFuturesOrErrorAnnotation();
+
+/// The class that enables the `@mustAwaitAllFuturesOrError` annotation.
+final class MustAwaitAllFuturesOrErrorAnnotation {
+  const MustAwaitAllFuturesOrErrorAnnotation();
+}
+
 const mustAwaitAllFutures = MustAwaitAllFuturesAnnotation();
 
 /// The class that enables the `@mustAwaitAllFutures` annotation.
