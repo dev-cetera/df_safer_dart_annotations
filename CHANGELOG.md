@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.3]
+
+- Released @ 6/2025 (UTC)
+- feat: Add more annotations
+
 ## [0.1.2]
 
 - Released @ 6/2025 (UTC)
