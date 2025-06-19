@@ -10,11 +10,11 @@
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
-const unsafeOrError = UnsafenOrErrorAnnotation();
+const unsafeOrError = UnsafeOrErrorAnnotation();
 
 /// The class that enables the `@unsafeOrError` annotation.
-final class UnsafenOrErrorAnnotation {
-  const UnsafenOrErrorAnnotation();
+final class UnsafeOrErrorAnnotation {
+  const UnsafeOrErrorAnnotation();
 }
 
 const unsafe = UnsafeAnnotation();
