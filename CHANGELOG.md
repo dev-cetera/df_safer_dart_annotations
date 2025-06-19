@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.6]
+
+- Released @ 6/2025 (UTC)
+- fix: Fix class name typo
+
 ## [0.1.5]
 
 - Released @ 6/2025 (UTC)
