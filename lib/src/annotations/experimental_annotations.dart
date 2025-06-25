@@ -12,21 +12,21 @@
 
 const experimental1 = ExperimentalAnnotation1();
 
-/// The class that enables the `@experimental1` annotation.
+/// The class that enables the @[experimental1] annotation.
 final class ExperimentalAnnotation1 {
   const ExperimentalAnnotation1();
 }
 
 const experimental2 = ExperimentalAnnotation2();
 
-/// The class that enables the `@experimental2` annotation.
+/// The class that enables the @[experimental2] annotation.
 final class ExperimentalAnnotation2 {
   const ExperimentalAnnotation2();
 }
 
 const experimental3 = ExperimentalAnnotation3();
 
-/// The class that enables the `@experimental3` annotation.
+/// The class that enables the @[experimental3] annotation.
 final class ExperimentalAnnotation3 {
   const ExperimentalAnnotation3();
 }

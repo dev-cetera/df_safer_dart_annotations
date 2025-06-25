@@ -10,16 +10,16 @@
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
-const mustBeAnonymous = MustBeAnonymousAnnotation();
-
-/// The class that enables the `@mustBeAnonymous` annotation.
-final class MustBeAnonymousAnnotation {
-  const MustBeAnonymousAnnotation();
-}
-
 const mustBeAnonymousOrError = MustBeAnonymousOrErrorAnnotation();
 
-/// The class that enables the `@mustBeAnonymousOrError` annotation.
+/// The class that enables the @[mustBeAnonymousOrError] annotation.
 final class MustBeAnonymousOrErrorAnnotation {
   const MustBeAnonymousOrErrorAnnotation();
+}
+
+const mustBeAnonymous = MustBeAnonymousAnnotation();
+
+/// The class that enables the @[mustBeAnonymous] annotation.
+final class MustBeAnonymousAnnotation {
+  const MustBeAnonymousAnnotation();
 }

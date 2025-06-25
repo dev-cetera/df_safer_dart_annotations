@@ -12,14 +12,14 @@
 
 const mustHandleReturnOrError = MustHandleReturnAnnotation();
 
-/// The class that enables the `@mustHandleReturnOrError` annotation.
+/// The class that enables the @[mustHandleReturnOrError] annotation.
 final class MustHandleReturnOrErrorAnnotation {
   const MustHandleReturnOrErrorAnnotation();
 }
 
 const mustHandleReturn = MustHandleReturnAnnotation();
 
-/// The class that enables the `@mustHandleReturn` annotation.
+/// The class that enables the @[mustHandleReturn] annotation.
 final class MustHandleReturnAnnotation {
   const MustHandleReturnAnnotation();
 }

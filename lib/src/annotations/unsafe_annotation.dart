@@ -12,14 +12,14 @@
 
 const unsafeOrError = UnsafeOrErrorAnnotation();
 
-/// The class that enables the `@unsafeOrError` annotation.
+/// The class that enables the @[unsafeOrError] annotation.
 final class UnsafeOrErrorAnnotation {
   const UnsafeOrErrorAnnotation();
 }
 
 const unsafe = UnsafeAnnotation();
 
-/// The class that enables the `@unsafe` annotation.
+/// The class that enables the @[unsafe] annotation.
 final class UnsafeAnnotation {
   const UnsafeAnnotation();
 }

@@ -10,16 +10,16 @@
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
-const noFuturesAllowedOrError = NoFuturesAllowedOrErrorAnnotation();
+const noFuturesOrError = NoFuturesOrErrorAnnotation();
 
-/// The class that enables the `@noFuturesAllowedOrError` annotation.
-final class NoFuturesAllowedOrErrorAnnotation {
-  const NoFuturesAllowedOrErrorAnnotation();
+/// The class that enables the @[noFuturesOrError] annotation.
+final class NoFuturesOrErrorAnnotation {
+  const NoFuturesOrErrorAnnotation();
 }
 
-const noFuturesAllowed = NoFuturesAllowedAnnotation();
+const noFutures = NoFuturesAnnotation();
 
-/// The class that enables the `@noFuturesAllowed` annotation.
-final class NoFuturesAllowedAnnotation {
-  const NoFuturesAllowedAnnotation();
+/// The class that enables the @[noFutures] annotation.
+final class NoFuturesAnnotation {
+  const NoFuturesAnnotation();
 }

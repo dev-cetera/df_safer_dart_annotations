@@ -12,14 +12,14 @@
 
 const mustBeStrongRefOrError = MustBeStrongRefOrErrorAnnotation();
 
-/// The class that enables the `@MustBeStrongRefOrError` annotation.
+/// The class that enables the @[mustBeStrongRefOrError] annotation.
 final class MustBeStrongRefOrErrorAnnotation {
   const MustBeStrongRefOrErrorAnnotation();
 }
 
 const mustBeStrongRef = MustBeStrongRefAnnotation();
 
-/// The class that enables the `@MustBeStrongRef` annotation.
+/// The class that enables the @[mustBeStrongRef] annotation.
 final class MustBeStrongRefAnnotation {
   const MustBeStrongRefAnnotation();
 }

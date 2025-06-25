@@ -13,7 +13,6 @@ Dart & Flutter Packages by dev-cetera.com & contributors.
 
 Annotations for the the [df_safer_dart_lints](https://pub.dev/packages/df_safer_dart_lints) package.
 
-
 <!-- END _README_CONTENT -->
 
 ---
@@ -48,3 +47,4 @@ If you're enjoying this package and find it valuable, consider showing your appr
 ## 🧑‍⚖️ License
 
 This project is released under the [MIT License](https://raw.githubusercontent.com/dev-cetera/df_safer_dart_annotations/main/LICENSE). See [LICENSE](https://raw.githubusercontent.com/dev-cetera/df_safer_dart_annotations/main/LICENSE) for more information.
+
