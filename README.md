@@ -11,6 +11,8 @@ Dart & Flutter Packages by dev-cetera.com & contributors.
 
 ---
 
+[![banner](https://github.com/dev-cetera/df_safer_dart/blob/v0.2.0/doc/assets/banner.png?raw=true)](https://github.com/dev-cetera)
+
 <!-- BEGIN _README_CONTENT -->
 
 Annotations for the the [df_safer_dart_lints](https://pub.dev/packages/df_safer_dart_lints) package.
