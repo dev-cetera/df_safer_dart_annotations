@@ -40,9 +40,7 @@ int synchronousCalculation(int a, int b) {
 ///
 /// This annotation ensures a strong reference is passed (not an anonymous function).
 /// Used by df_pod for weak listener patterns.
-void addListener({
-  @mustBeStrongRef required void Function() listener,
-}) {
+void addListener({@mustBeStrongRef required void Function() listener}) {
   // The listener should be a variable, not an anonymous function,
   // so it can be garbage collected when the variable goes out of scope.
   listener();
