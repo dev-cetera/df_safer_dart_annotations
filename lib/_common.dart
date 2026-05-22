@@ -11,16 +11,8 @@
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
-const mustHandleReturnOrError = MustHandleReturnOrErrorAnnotation();
+// Internal-only umbrella import. Files under lib/src/ import this as
+// `import '/_common.dart';`. Re-export third-party APIs the package depends on
+// here so individual sources don't repeat the same imports.
 
-/// The class that enables the @[mustHandleReturnOrError] annotation.
-final class MustHandleReturnOrErrorAnnotation {
-  const MustHandleReturnOrErrorAnnotation();
-}
-
-const mustHandleReturn = MustHandleReturnAnnotation();
-
-/// The class that enables the @[mustHandleReturn] annotation.
-final class MustHandleReturnAnnotation {
-  const MustHandleReturnAnnotation();
-}
+export 'src/_src.g.dart';

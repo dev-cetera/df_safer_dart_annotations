@@ -1,56 +1,11 @@
 # Changelog
 
-## [0.2.2]
+## 0.3.0
 
-- Released @ 2/2026 (UTC)
-- Minor bugfixes
-
-## [0.2.1]
-
-- Released @ 2/2026 (UTC)
-- Minor updates
-
-## [0.2.0]
-
-- Released @ 6/2025 (UTC)
-- Refactor for simplicity
-
-## [0.1.7]
-
-- Released @ 6/2025 (UTC)
-- Update dependencies
-
-## [0.1.6]
-
-- Released @ 6/2025 (UTC)
-- fix: Fix class name typo
-
-## [0.1.5]
-
-- Released @ 6/2025 (UTC)
-- feat: Add UnsafenOrErrorAnnotation and UnsafeAnnotation annotations
-
-## [0.1.4]
-
-- Released @ 6/2025 (UTC)
-- Update reame and test
-
-## [0.1.3]
-
-- Released @ 6/2025 (UTC)
-- feat: Add more annotations
-
-## [0.1.2]
-
-- Released @ 6/2025 (UTC)
-- feat: Add more annotations
-
-## [0.1.1]
-
-- Released @ 6/2025 (UTC)
-- feat: Add more annotations
-
-## [0.1.0]
-
-- Released @ 6/2025 (UTC)
-- Inital release
+- **fix**: `mustHandleReturnOrError` now refers to the dedicated
+  `MustHandleReturnOrErrorAnnotation` class (it was previously aliased to
+  `MustHandleReturnAnnotation`). The `df_safer_dart_lints` plugin matches
+  annotations by class name, so the warning and error variants used to be
+  indistinguishable — `@mustHandleReturnOrError` callsites were being
+  picked up by the warning-level rule instead of the error-level one. Both
+  variants now fire under their intended severity.

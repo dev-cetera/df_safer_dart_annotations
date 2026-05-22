@@ -1,7 +1,5 @@
-[![banner](https://github.com/dev-cetera/df_safer_dart_annotations/blob/v0.2.2/doc/assets/banner.png?raw=true)](https://github.com/dev-cetera)
-
 [![pub](https://img.shields.io/pub/v/df_safer_dart_annotations.svg)](https://pub.dev/packages/df_safer_dart_annotations)
-[![tag](https://img.shields.io/badge/Tag-v0.2.2-purple?logo=github)](https://github.com/dev-cetera/df_safer_dart_annotations/tree/v0.2.2)
+[![tag](https://img.shields.io/badge/Tag-v0.3.0-purple?logo=github)](https://github.com/dev-cetera/df_safer_dart_annotations/tree/v0.3.0)
 [![buymeacoffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-FFDD00?logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/dev_cetera)
 [![sponsor](https://img.shields.io/badge/Sponsor-grey?logo=github-sponsors&logoColor=pink)](https://github.com/sponsors/dev-cetera)
 [![patreon](https://img.shields.io/badge/Patreon-grey?logo=patreon)](https://www.patreon.com/robelator)
@@ -11,67 +9,73 @@
 
 ---
 
-<!-- BEGIN _README_CONTENT -->
-
 ## Summary
 
-`df_safer_dart_annotations` provides annotations used by [df_safer_dart_lints](https://pub.dev/packages/df_safer_dart_lints) custom lint rules. These annotations help enforce safety patterns in your code.
+`df_safer_dart_annotations` provides the **marker annotations** consumed by
+the [`df_safer_dart_lints`](https://pub.dev/packages/df_safer_dart_lints)
+plugin and re-exported by
+[`df_safer_dart`](https://pub.dev/packages/df_safer_dart). This package has
+no runtime behaviour — each annotation is an empty `const` class whose
+*name* is what the lint plugin matches on.
 
-## Available Annotations
+Every annotation comes in two forms:
 
-| Annotation | Purpose |
-|------------|---------|
-| `@mustHandleReturn` | Warns when return value is ignored |
-| `@mustHandleReturnOrError` | Errors when return value is ignored |
-| `@noFutures` | Warns when Futures are used in annotated scope |
-| `@noFuturesOrError` | Errors when Futures are used in annotated scope |
-| `@mustBeAnonymous` | Warns when non-anonymous functions are used |
-| `@mustBeStrongRef` | Warns when weak references are used |
-| `@mustAwaitAllFutures` | Warns when Futures aren't awaited |
-| `@UNSAFE` | Marks intentionally unsafe code blocks |
+- the bare name (`@noFutures`, `@unsafe`, …) — reported by the analyzer as a
+  **warning**, so existing code can migrate incrementally.
+- the `*OrError` suffix (`@noFuturesOrError`, `@unsafeOrError`, …) — reported
+  as an **error** that blocks the build.
 
-## Usage
+## Annotations
+
+| Annotation                  | Use it on…             | The lint stops… |
+|-----------------------------|------------------------|-----------------|
+| `@noFutures`                | functions / closures   | `async`, `await`, or any `Future`-typed expression inside the body |
+| `@mustAwaitAllFutures`      | functions / closures   | Futures produced and then dropped as bare statements |
+| `@mustBeAnonymous`          | function parameters    | callers passing a named function reference instead of an inline lambda |
+| `@mustBeStrongRef`          | function parameters    | callers passing an inline function literal where a long-lived reference is required. Top-level functions, static methods, and instance-method tear-offs are accepted (weak-listener pattern) |
+| `@mustHandleReturn`         | functions / methods    | callers discarding the return value |
+| `@unsafe` / `@unsafeOrError`| functions / methods    | callers invoking unsafe API outside an `UNSAFE(() => ...)` block |
+| `@experimental1/2/3`        | anything               | (informational — used by tooling to flag early-stage API) |
+
+## Installation
+
+```sh
+dart pub add df_safer_dart_annotations
+```
+
+Most projects don't depend on this directly — they depend on `df_safer_dart`,
+which re-exports it. Use this package directly only if you want the
+annotations without pulling the full `Outcome` stack.
+
+## Example
 
 ```dart
 import 'package:df_safer_dart_annotations/df_safer_dart_annotations.dart';
 
-@mustHandleReturn
-String whatIsYourName() {
-  return 'Tony';
+@noFutures
+int synchronousCalculation(int a, int b) {
+  // Adding `await Future.delayed(...)` here would fire `no_futures`.
+  return a + b;
 }
+
+@mustHandleReturnOrError
+String whatIsYourName() => 'Tony';
 
 void main() {
-  whatIsYourName(); // triggers a warning - return value not used!
-  print(whatIsYourName()); // OK - return value is used
+  // OK — return value used.
+  final name = whatIsYourName();
+  print(name);
+
+  // Would fire `must_handle_return_or_error`:
+  // whatIsYourName();
 }
 ```
 
-## Installation
-
-Add to your `pubspec.yaml`:
-
-```yaml
-dev_dependencies:
-  df_safer_dart_annotations: any
-  df_safer_dart_lints: any
-  custom_lint: any
-```
-
-Enable in `analysis_options.yaml`:
-
-```yaml
-analyzer:
-  plugins:
-    - custom_lint
-```
-
-## Related Packages
-
-- [df_safer_dart](https://pub.dev/packages/df_safer_dart) - Core safety types (Option, Result, Resolvable)
-- [df_safer_dart_lints](https://pub.dev/packages/df_safer_dart_lints) - Lint rules that use these annotations
-
-
-<!-- END _README_CONTENT -->
+For the rule semantics see the
+[`df_safer_dart_lints` README](https://pub.dev/packages/df_safer_dart_lints)
+and its fixture suite. For the full `Outcome` / `Result` / `Resolvable`
+ecosystem see
+[`df_safer_dart`](https://pub.dev/packages/df_safer_dart).
 
 ---
 

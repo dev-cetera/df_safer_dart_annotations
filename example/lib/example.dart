@@ -1,8 +1,6 @@
 // This example demonstrates df_safer_dart_annotations.
 // These annotations work with df_safer_dart_lints to enforce safety patterns.
 
-// ignore_for_file: avoid_print, unused_local_variable
-
 import 'package:df_safer_dart_annotations/df_safer_dart_annotations.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
