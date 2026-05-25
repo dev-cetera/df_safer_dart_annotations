@@ -14,3 +14,4 @@ export './annotations/must_be_strong_ref_annotation.dart';
 export './annotations/must_await_all_futures_annotation.dart';
 export './annotations/unsafe_annotation.dart';
 export './annotations/must_handle_return_annotation.dart';
+export './annotations/sendable_annotation.dart';

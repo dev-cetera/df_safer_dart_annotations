@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.1
+
+- **feat**: add `@sendable` / `SendableAnnotation` and `@sendableOrError` /
+  `SendableOrErrorAnnotation` markers for parameters that must be sendable
+  through `SendPort` (top-level functions and static method references
+  only). The error variant escalates the matching `df_safer_dart_lints`
+  rule from warning to error severity.
+
 ## 0.3.0
 
 - **fix**: `mustHandleReturnOrError` now refers to the dedicated

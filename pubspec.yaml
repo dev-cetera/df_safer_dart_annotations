@@ -19,7 +19,7 @@ funding:
   - https://www.patreon.com/c/robelator
   - https://github.com/sponsors/robelator
 description: Annotations for the df_safer_dart_lints package.
-version: 0.3.0
+version: 0.3.1
 topics:
   - rust
   - error-handling

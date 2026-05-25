@@ -9,6 +9,8 @@
 
 ---
 
+<!-- BEGIN _README_CONTENT -->
+
 ## Summary
 
 `df_safer_dart_annotations` provides the **marker annotations** consumed by
@@ -76,6 +78,8 @@ For the rule semantics see the
 and its fixture suite. For the full `Outcome` / `Result` / `Resolvable`
 ecosystem see
 [`df_safer_dart`](https://pub.dev/packages/df_safer_dart).
+
+<!-- END _README_CONTENT -->
 
 ---
 
